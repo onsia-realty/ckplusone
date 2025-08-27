@@ -1,0 +1,412 @@
+.servicesSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight {
+  color: #AF001B;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.serviceCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 40px 25px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 280px;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.serviceContent h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.serviceContent p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.serviceOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #AF001B;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serviceCard:hover .serviceOverlay {
+  opacity: 1;
+}
+
+.serviceOverlay h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.serviceOverlay p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.detailLink {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.registerButton {
+  display: inline-block;
+  padding: 18px 50px;
+  background: #AF001B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.registerButton:hover {
+  background: #8B0015;
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: #AF001B;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 36px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.inputWrapper svg {
+  position: absolute;
+  left: 0;
+  color: white;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.inputWrapper input {
+  flex: 1;
+  padding: 15px 0 15px 35px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.inputWrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.textareaWrapper textarea {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+}
+
+.textareaWrapper textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.privacyWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  position: relative;
+  user-select: none;
+}
+
+.checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .checkmark {
+  background: white;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #AF001B;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.privacyLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 18px;
+  background: white;
+  color: #AF001B;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modalContent {
+    padding: 30px;
+  }
+  
+  .modalTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesSection {
+    padding: 60px 0;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  
+  .serviceCard {
+    padding: 30px 20px;
+    min-height: 240px;
+  }
+  
+  .serviceContent h3,
+  .serviceOverlay h3 {
+    font-size: 20px;
+  }
+  
+  .serviceContent p,
+  .serviceOverlay p {
+    font-size: 13px;
+  }
+  
+  .registerButton {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+  
+  .modalContent {
+    padding: 25px;
+    width: 95%;
+  }
+  
+  .modalTitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .closeButton {
+    font-size: 28px;
+    top: 15px;
+    right: 15px;
+  }
+}

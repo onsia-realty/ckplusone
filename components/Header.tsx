@@ -30,9 +30,11 @@ export default function Header() {
       <div className="container mx-auto">
         <nav className="flex items-center justify-between h-20 px-4">
           <Link href="/" className="flex items-center">
-            <div className={`font-bold text-2xl ${isScrolled ? 'text-primary' : 'text-white'}`}>
-              청광플러스원
-            </div>
+            <img 
+              src={isScrolled ? "/images/logo_on.png" : "/images/logo.png"} 
+              alt="청광플러스원" 
+              className="h-10"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">

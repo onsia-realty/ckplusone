@@ -1,0 +1,190 @@
+.footer {
+  background: #2a2a2a;
+  color: #aaa;
+  padding: 50px 0 30px;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.footerLogo img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.footerMenu {
+  display: flex;
+  gap: 30px;
+}
+
+.footerLink {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: white;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footerInfo {
+  flex: 1;
+}
+
+.footerTel {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #bbb;
+}
+
+.footerTel strong {
+  color: white;
+  font-size: 24px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.footerNotice {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #666;
+}
+
+.footerLogos {
+  display: flex;
+  gap: 40px;
+}
+
+.logoItem {
+  text-align: center;
+}
+
+.logoItem span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #999;
+}
+
+.logoItem img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 25px;
+  }
+  
+  .footerTop {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footerInfo {
+    width: 100%;
+  }
+  
+  .footerLogos {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .mobile {
+    display: inline;
+  }
+  
+  .footerTel {
+    font-size: 16px;
+  }
+  
+  .footerTel strong {
+    font-size: 20px;
+    display: block;
+    margin-top: 8px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 35px 0 20px;
+  }
+  
+  .footerLogo img {
+    height: 35px;
+  }
+  
+  .footerMenu {
+    gap: 20px;
+  }
+  
+  .footerLink {
+    font-size: 13px;
+  }
+  
+  .footerTel {
+    font-size: 14px;
+  }
+  
+  .footerTel strong {
+    font-size: 18px;
+  }
+  
+  .footerNotice {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  
+  .copyright {
+    font-size: 12px;
+  }
+  
+  .logoItem span {
+    font-size: 12px;
+  }
+  
+  .logoItem img {
+    height: 35px;
+  }
+}

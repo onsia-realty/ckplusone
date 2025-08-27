@@ -1,0 +1,254 @@
+/* Responsive CSS */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+    .inner {
+        padding: 0 30px;
+    }
+    
+    .visual-title {
+        font-size: 48px;
+    }
+    
+    .visual-desc {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .company-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Landscape (768px and below) */
+@media (max-width: 768px) {
+    /* Header */
+    .header .inner {
+        height: 60px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    .gnb {
+        display: none;
+    }
+    
+    .menu-btn {
+        display: flex;
+    }
+    
+    /* Main Visual */
+    .main-visual {
+        height: 70vh;
+    }
+    
+    .visual-title {
+        font-size: 36px;
+    }
+    
+    .visual-desc {
+        font-size: 18px;
+    }
+    
+    .visual-text {
+        font-size: 16px;
+    }
+    
+    .visual-control {
+        padding: 0 20px;
+    }
+    
+    .visual-control button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    /* Sections */
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .section-title p {
+        font-size: 16px;
+    }
+    
+    /* Service Grid */
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Footer */
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logos {
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 30px;
+        width: 95%;
+    }
+    
+    .modal-content h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+    .inner {
+        padding: 0 15px;
+    }
+    
+    /* Main Visual */
+    .main-visual {
+        height: 60vh;
+    }
+    
+    .visual-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .visual-desc {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .visual-text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    
+    .btn-detail {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    /* Sections */
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .section-title p {
+        font-size: 14px;
+    }
+    
+    .company-text h3 {
+        font-size: 20px;
+    }
+    
+    .company-text p {
+        font-size: 14px;
+    }
+    
+    /* Service */
+    .service-item {
+        padding: 30px 20px;
+    }
+    
+    .service-content h3,
+    .service-hover h3 {
+        font-size: 20px;
+    }
+    
+    .service-content p,
+    .service-hover p {
+        font-size: 13px;
+    }
+    
+    /* Footer */
+    .footer-tel {
+        font-size: 16px;
+    }
+    
+    .footer-tel strong {
+        font-size: 20px;
+        display: block;
+        margin-top: 5px;
+    }
+    
+    .footer-notice {
+        font-size: 12px;
+    }
+    
+    .copyright {
+        font-size: 12px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 25px 20px;
+    }
+    
+    .modal-content h3 {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .form-row input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .btn-submit {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile Menu Active State */
+.menu-open {
+    overflow: hidden;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile {
+        display: inline;
+    }
+}
+
+/* Hide scrollbar when modal is open */
+.modal-open {
+    overflow: hidden;
+}
